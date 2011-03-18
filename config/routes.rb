@@ -1,4 +1,6 @@
 Shop::Application.routes.draw do
+  resources :values
+
   resources :attributes
 
   resources :types
