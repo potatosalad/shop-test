@@ -1,4 +1,6 @@
 Shop::Application.routes.draw do
+  resources :attributes
+
   resources :types
 
   # The priority is based upon order of creation:
