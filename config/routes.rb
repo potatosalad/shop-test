@@ -1,4 +1,6 @@
 Shop::Application.routes.draw do
+  resources :entities
+
   resources :values
 
   resources :attributes
