@@ -1,5 +1,8 @@
 Shop::Application.routes.draw do
+  resources :attribute_groups
+
   resources :entities
+  resources :products
 
   resources :values
 

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @attribute_group.name %>
+</p>
+
+<h3>Attributes:</h3>
+<ul>
+  <% for attribute in @attribute_group.attrs %>
+    <li><%= link_to attribute.name, attribute %></li>
+  <% end %>
+</ul>
+
+<h3>Entities:</h3>
+<ul>
+  <% for entity in @attribute_group.entities %>
+    <li><%= link_to entity.name, entity %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_attribute_group_path(@attribute_group) %> |
+<%= link_to 'Back', attribute_groups_path %>
