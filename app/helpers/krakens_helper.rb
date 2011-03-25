@@ -1,0 +1,2 @@
+module KrakensHelper
+end

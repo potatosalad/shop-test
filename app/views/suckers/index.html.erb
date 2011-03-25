@@ -1,0 +1,23 @@
+<h1>Listing suckers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @suckers.each do |sucker| %>
+  <tr>
+    <td><%= sucker.name %></td>
+    <td><%= link_to 'Show', sucker %></td>
+    <td><%= link_to 'Edit', edit_sucker_path(sucker) %></td>
+    <td><%= link_to 'Destroy', sucker, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sucker', new_sucker_path %>

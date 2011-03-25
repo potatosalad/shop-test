@@ -1,4 +1,12 @@
 Shop::Application.routes.draw do
+  resources :beaks
+
+  resources :tentacles
+
+  resources :suckers
+
+  resources :krakens
+
   resources :attribute_groups
 
   resources :entities

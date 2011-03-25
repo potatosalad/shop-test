@@ -1,0 +1,23 @@
+<h1>Listing beaks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @beaks.each do |beak| %>
+  <tr>
+    <td><%= beak.name %></td>
+    <td><%= link_to 'Show', beak %></td>
+    <td><%= link_to 'Edit', edit_beak_path(beak) %></td>
+    <td><%= link_to 'Destroy', beak, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Beak', new_beak_path %>

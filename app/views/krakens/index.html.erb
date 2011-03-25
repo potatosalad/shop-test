@@ -1,0 +1,23 @@
+<h1>Listing krakens</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @krakens.each do |kraken| %>
+  <tr>
+    <td><%= kraken.name %></td>
+    <td><%= link_to 'Show', kraken %></td>
+    <td><%= link_to 'Edit', edit_kraken_path(kraken) %></td>
+    <td><%= link_to 'Destroy', kraken, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Kraken', new_kraken_path %>

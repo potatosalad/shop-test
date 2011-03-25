@@ -1,0 +1,23 @@
+<h1>Listing tentacles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tentacles.each do |tentacle| %>
+  <tr>
+    <td><%= tentacle.name %></td>
+    <td><%= link_to 'Show', tentacle %></td>
+    <td><%= link_to 'Edit', edit_tentacle_path(tentacle) %></td>
+    <td><%= link_to 'Destroy', tentacle, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tentacle', new_tentacle_path %>
